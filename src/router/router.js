@@ -1,0 +1,35 @@
+import { loginPage } from "../pages/login";
+import { dashboardPage } from "../pages/dashboard";
+import { adminPage } from "../pages/admin";
+
+const routes = {
+  "/": loginPage,
+  "/dashboard": dashboardPage,
+  "/admin": adminPage,
+  "/adm": loginPage
+};
+
+export const navigateTo = (path) => {
+  history.pushState({}, "", path);
+  router();
+};
+
+export const router = async () => {
+  const app = document.querySelector("#app");
+
+  const path = window.location.pathname;
+  console.log({path});
+  
+
+
+  const page = routes[path];
+  console.log(page);
+  
+
+  if (!page) {
+    app.innerHTML = "<h1>404</h1>";
+    return;
+  }
+
+  await page(app);
+};
