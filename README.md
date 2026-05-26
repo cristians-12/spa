@@ -30,7 +30,8 @@ Puede realizarse en:
 
 ### 4. Parte 1 — Nuevas páginas SPA
 
-   Actualmente la aplicación renderiza información básica de personajes.
+   la aplicación necesita renderizar información básica de personajes.
+   
    El cliente solicita ampliar el sistema creando nuevas páginas dinámicas dentro de la SPA.
    
    **Requerimiento 1** — Página de Episodios
