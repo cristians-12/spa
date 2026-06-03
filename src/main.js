@@ -4,3 +4,5 @@ import { router } from "./router/router";
 window.addEventListener("DOMContentLoaded", router);
 
 window.addEventListener("popstate", router);
+
+// Single Page Application
